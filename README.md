@@ -26,7 +26,12 @@ The first precaution we took with the data was to ensure all numeric columns wer
 
 
 Next, we began our exploratory data analysis. We first plotted the relationship between power outages and month using a bar chart. We observed that summer months (June, July, and August) on average had a greater number of outages, while the fall months (September, October, and November) appeared to have the fewest number of outages.
-
+<iframe
+  src="assets/plot1.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 We then used a line plot to represent the relationship between the number of outages and the hour of the day. There was a clear relationship showing that outages were more likely to begin in the late afternoon (2pm - 4pm) and rarely occurred in the late night/early morning.
 
 Next, we explored the duration of outages. We plotted a bar chart showing the average duration of outages by month. The average outage duration was significantly larger in September and October, which led us to investigate a possible inverse relationship between the number of outages and average duration. After further analysis, we concluded that there was no significant relationship.
