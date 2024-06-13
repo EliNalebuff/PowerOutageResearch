@@ -130,7 +130,8 @@ The baseline model tended to overpredict that the outage duration would be great
 
 
 
-![Alt text](assets/base)
+
+<img src="assets/baseg" alt="Alt text" width="200"/>
 
 
 
