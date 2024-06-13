@@ -30,7 +30,7 @@ Next, we began our exploratory data analysis. We first plotted the relationship 
 <iframe
   src="assets/plot1.html"
   width="1200"
-  height="800"
+  height="400"
   frameborder="0"
 ></iframe>
 
@@ -66,3 +66,9 @@ Lastly, we created a scatter plot showing the relationship between the time of d
   height="800"
   frameborder="0"
 ></iframe>
+## Assessment of Missingness
+
+Most of the columns in our dataset contained no missing values, but one of the columns we noticed had missing values that are likely NMAR (Not Missing At Random) is the customers affected column. This column was collected by aggregating data from a variety of sources, and certain companies may have chosen not to report this number if it reflected badly on them.
+
+Because this analysis is primarily focused on the duration of outages, we decided it was crucial to investigate the missingness of the duration column. We conducted a series of permutation tests comparing the distribution of relevant categorical variables when duration was missing vs. not missing. After a series of tests, we determined that the missingness of duration was most associated with the year and climate category columns. We then imputed the missing duration values using conditional mean imputation. Lastly, we used the newly created durations to also impute the outage restoration date/time column.
+
