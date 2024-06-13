@@ -16,9 +16,12 @@ We chose to explore the Power outage dataset from Purdue University. The dataset
   - U.S._STATE (state the outage occurred)
   - CLIMATE.REGION (region of the U.S the outage occurred, i.e., North East)
   - CLIMATE.CATEGORY (cold, warm or hot)
-  - OUTAGE.START.DATE/TIME
-  - OUTAGE.RESTORATION.DATE/TIME
-  - CAUSE.CATEGORY
+  - OUTAGE.START.DATE (date outage began)
+  - OUTAGE.START.TIME (time outage began)
+  - OUTAGE.RESTORATION.DATE (date outage was restored)
+  - OUTAGE.RESTORATION.TIME (time outage was restored)
+  - OUTAGE.DURATION (length of duration in minutes)
+  - CAUSE.CATEGORY (cause of outage)
  
 ##  Data Cleaning and Exploratory Data Analysis
 
