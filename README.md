@@ -122,4 +122,25 @@ All features used in the model are those that can be determined at the start of 
 
 Our model is designed to allow predictions even with incomplete information, ensuring that it can still provide useful insights despite potential gaps in the data.
 
+## Baseline Model
+
+Our baseline model used month, cause category, NERC region, and climate category to predict whether an outage would last under an hour. All these features are ordinal, and therefore we utilized one-hot encoding.
+
+The baseline model tended to overpredict that the outage duration would be greater than an hour. It had low precision and recall scores when predicting durations under an hour. While the model is a good starting point, it has significant shortcomings.
+
+## Final Model
+
+In our final model, we added day_of_week and time_of_day, which we also one-hot encoded. We chose these parameters because our earlier analysis indicated a distinguishable relationship between time of day, day of week, and outage duration. This relationship did not appear to be linear, so we believed that one-hot encoding these features in a classifier would be more effective.
+
+Although the overall accuracy of the final model decreased, we observed a much higher recall and F1-score for predicting outages under an hour. The hyperparameters were optimized by running multiple GridSearches with various ranges. The optimal values were a max depth of 14 and an estimator count of 240.
+
+The original model had higher accuracy and higher precision for predicting longer outages because it predicted longer durations more frequently, aligning with the dataset's distribution that contained more instances of longer outages.
+
+We believe this final model is better because it now correctly predicts outages lasting less than an hour much more frequently.
+
+### Fairness Test
+
+To ensure fairness, we examined whether outages in cold regions were being predicted fairly. This was important because a lack of power in a cold environment can be detrimental to safety. Our null hypothesis was that prediction accuracy is the same for cold climates and other climates. Our alternative hypothesis was that cold climates are predicted less accurately than other climates. 
+
+Permutation tests revealed no significant difference in prediction accuracy. The p-value was 0.676, indicating that the model does not unfairly disadvantage outages in cold climates.
 
