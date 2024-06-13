@@ -50,12 +50,7 @@ Next, we explored the duration of outages. We plotted a bar chart showing the av
 ></iframe>
 We also explored whether certain climate regions had different distributions of outages with regard to the season. We created a categorical bar chart with climate region on the X-axis and normalized the number of outages on the Y-axis. We noticed that the central regions had a higher percentage of outages occurring in the summer. We also observed trends that aligned with regional weather patterns, such as the northwest having a higher share of winter outages.
 <iframe
-  src="assets/plot4.html"
-  width="1200"
-  height="800"
-  frameborder="0"
-></iframe>
-
+  src="assets/plot4.html" width="1200" height="800" frameborder="0"></iframe>
 Additionally, we examined the average duration of outages in relation to their causes. We found that fuel supply emergencies had by far the largest average duration.
 <iframe
   src="assets/plot5.html"
