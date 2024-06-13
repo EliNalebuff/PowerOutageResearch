@@ -102,3 +102,24 @@ We conducted two primary hypothesis tests to explore the effects of the time of 
 - **P-Value:** 0.0
 - **Conclusion:** There is a high likelihood that the time of year (month) affects the frequency of outages.
 
+## Framing a Prediction Problem
+
+We aim to predict whether power outage duration will be greater than or less than 1 hour. For this task, we have chosen a binary classification model. This model could be particularly useful for individuals experiencing power outages who want to know if they are likely to regain power within an hour of the outage starting.
+
+### Model Evaluation
+
+We will use the F1 score to evaluate the model's performance. The F1 score balances precision and recall, making it a suitable metric for our needs as it prioritizes good overall predictions without favoring either recall or precision excessively.
+
+### Features
+
+All features used in the model are those that can be determined at the start of the outage. This includes:
+- Geographic information
+- Climatic conditions
+- Cause of the outage
+- Time-specific information
+
+### Model Flexibility
+
+Our model is designed to allow predictions even with incomplete information, ensuring that it can still provide useful insights despite potential gaps in the data.
+
+
