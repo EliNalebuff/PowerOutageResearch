@@ -38,14 +38,14 @@ We then used a line plot to represent the relationship between the number of out
 <iframe
   src="assets/plot2.html"
   width="1200"
-  height="800"
+  height="400"
   frameborder="0"
 ></iframe>
 Next, we explored the duration of outages. We plotted a bar chart showing the average duration of outages by month. The average outage duration was significantly larger in September and October, which led us to investigate a possible inverse relationship between the number of outages and average duration. After further analysis, we concluded that there was no significant relationship.
 <iframe
   src="assets/plot3.html"
   width="1200"
-  height="800"
+  height="400"
   frameborder="0"
 ></iframe>
 We also explored whether certain climate regions had different distributions of outages with regard to the season. We created a categorical bar chart with climate region on the X-axis and normalized the number of outages on the Y-axis. We noticed that the central regions had a higher percentage of outages occurring in the summer. We also observed trends that aligned with regional weather patterns, such as the northwest having a higher share of winter outages.
@@ -55,7 +55,7 @@ Additionally, we examined the average duration of outages in relation to their c
 <iframe
   src="assets/plot5.html"
   width="1200"
-  height="800"
+  height="400"
   frameborder="0"
 ></iframe>
 
@@ -63,7 +63,7 @@ Lastly, we created a scatter plot showing the relationship between the time of d
 <iframe
   src="assets/plot6.html"
   width="1200"
-  height="800"
+  height="400"
   frameborder="0"
 ></iframe>
 ## Assessment of Missingness
@@ -71,4 +71,10 @@ Lastly, we created a scatter plot showing the relationship between the time of d
 Most of the columns in our dataset contained no missing values, but one of the columns we noticed had missing values that are likely NMAR (Not Missing At Random) is the customers affected column. This column was collected by aggregating data from a variety of sources, and certain companies may have chosen not to report this number if it reflected badly on them.
 
 Because this analysis is primarily focused on the duration of outages, we decided it was crucial to investigate the missingness of the duration column. We conducted a series of permutation tests comparing the distribution of relevant categorical variables when duration was missing vs. not missing. After a series of tests, we determined that the missingness of duration was most associated with the year and climate category columns. We then imputed the missing duration values using conditional mean imputation. Lastly, we used the newly created durations to also impute the outage restoration date/time column.
+<iframe
+  src="assets/plot7.html"
+  width="1200"
+  height="400"
+  frameborder="0"
+></iframe>
 
