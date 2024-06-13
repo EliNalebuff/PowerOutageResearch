@@ -128,6 +128,9 @@ Our baseline model used month, cause category, NERC region, and climate category
 
 The baseline model tended to overpredict that the outage duration would be greater than an hour. It had low precision and recall scores when predicting durations under an hour. While the model is a good starting point, it has significant shortcomings.
 
+![Alt text](assets/base)
+
+
 ## Final Model
 
 In our final model, we added day_of_week and time_of_day, which we also one-hot encoded. We chose these parameters because our earlier analysis indicated a distinguishable relationship between time of day, day of week, and outage duration. This relationship did not appear to be linear, so we believed that one-hot encoding these features in a classifier would be more effective.
@@ -137,6 +140,7 @@ Although the overall accuracy of the final model decreased, we observed a much h
 The original model had higher accuracy and higher precision for predicting longer outages because it predicted longer durations more frequently, aligning with the dataset's distribution that contained more instances of longer outages.
 
 We believe this final model is better because it now correctly predicts outages lasting less than an hour much more frequently.
+![Alt text](assets/improved)
 
 ### Fairness Test
 
