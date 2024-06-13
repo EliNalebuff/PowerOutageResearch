@@ -30,7 +30,7 @@ Next, we began our exploratory data analysis. We first plotted the relationship 
 <iframe
   src="assets/plot1.html"
   width="1200"
-  height="400"
+  height="500"
   frameborder="0"
 ></iframe>
 
@@ -38,24 +38,24 @@ We then used a line plot to represent the relationship between the number of out
 <iframe
   src="assets/plot2.html"
   width="1200"
-  height="400"
+  height="500"
   frameborder="0"
 ></iframe>
 Next, we explored the duration of outages. We plotted a bar chart showing the average duration of outages by month. The average outage duration was significantly larger in September and October, which led us to investigate a possible inverse relationship between the number of outages and average duration. After further analysis, we concluded that there was no significant relationship.
 <iframe
   src="assets/plot3.html"
   width="1200"
-  height="400"
+  height="500"
   frameborder="0"
 ></iframe>
 We also explored whether certain climate regions had different distributions of outages with regard to the season. We created a categorical bar chart with climate region on the X-axis and normalized the number of outages on the Y-axis. We noticed that the central regions had a higher percentage of outages occurring in the summer. We also observed trends that aligned with regional weather patterns, such as the northwest having a higher share of winter outages.
 <iframe
-  src="assets/plot4.html" width="1200" height="800" frameborder="0"></iframe>
+  src="assets/plot4.html" width="1200" height="500" frameborder="0"></iframe>
 Additionally, we examined the average duration of outages in relation to their causes. We found that fuel supply emergencies had by far the largest average duration.
 <iframe
   src="assets/plot5.html"
   width="1200"
-  height="400"
+  height="500"
   frameborder="0"
 ></iframe>
 
@@ -63,7 +63,7 @@ Lastly, we created a scatter plot showing the relationship between the time of d
 <iframe
   src="assets/plot6.html"
   width="1200"
-  height="400"
+  height="500"
   frameborder="0"
 ></iframe>
 ## Assessment of Missingness
@@ -74,7 +74,31 @@ Because this analysis is primarily focused on the duration of outages, we decide
 <iframe
   src="assets/plot7.html"
   width="1200"
-  height="400"
+  height="500"
   frameborder="0"
 ></iframe>
+## Hypothesis Testing
+
+We conducted two primary hypothesis tests to explore the effects of the time of year on power outages.
+
+### Test 1: Effect of Time of Year on Length of Outages
+
+- **Null Hypothesis (H0):** The time of year (month) does not affect the length of outages.
+- **Alternative Hypothesis (H1):** The time of year (month) does affect the length of outages.
+- **Observed Total Variation Distance (TVD):** 4350.77
+- **Significance Level:** 0.01
+
+**Results:**
+- **P-Value:** 0.0006
+- **Conclusion:** There is a high likelihood that the time of year does affect the length of outages.
+
+### Test 2: Effect of Time of Year on Frequency of Outages
+
+- **Null Hypothesis (H0):** The frequency of outages does not depend on the month.
+- **Alternative Hypothesis (H1):** The frequency of outages does depend on the month.
+- **Observed Total Variation Distance (TVD):** 0.10840
+
+**Results:**
+- **P-Value:** 0.0
+- **Conclusion:** There is a high likelihood that the time of year (month) affects the frequency of outages.
 
